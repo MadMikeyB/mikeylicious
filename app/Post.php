@@ -12,6 +12,16 @@ class Post extends Model
     public $guarded = [];
 
     /**
+     * Set the route key name for Laravel's Route Model Binding
+     * 
+     * @return string
+     */
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
+
+    /**
      * A post belongs to a user
      * 
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
