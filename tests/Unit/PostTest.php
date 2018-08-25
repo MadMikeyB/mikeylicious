@@ -2,15 +2,12 @@
 
 namespace Tests\Unit;
 
-use App\Post;
-use App\User;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class PostTest extends TestCase
 {
-
     use RefreshDatabase;
     
     public $post;
@@ -18,7 +15,7 @@ class PostTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $this->post = factory(Post::class)->create();
+        $this->post = factory(\App\Post::class)->create();
     }
 
 
@@ -37,12 +34,13 @@ class PostTest extends TestCase
     /** @test */
     public function it_has_an_author()
     {
-        $this->assertInstanceOf(User::class, $this->post->author);
+        $this->assertInstanceOf(\App\User::class, $this->post->author);
     }
 
-    // /** @test */
-    // public function it_has_an_associated_image()
-    // {
-    //     //
-    // }
+    /** @test */
+    public function it_has_an_associated_image()
+    {
+        $this->assertInstanceOf(\Illuminate\Database\Eloquent\Collection::class, $this->post->images);
+
+    }
 }
