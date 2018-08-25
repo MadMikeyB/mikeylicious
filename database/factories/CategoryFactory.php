@@ -6,6 +6,7 @@ $factory->define(App\Category::class, function (Faker $faker) {
     $title = $faker->sentence;
     return [
         'title' => $title,
-        'slug' => str_slug($title)
+        'slug' => str_slug($title),
+        'description' => $faker->paragraph
     ];
 });
