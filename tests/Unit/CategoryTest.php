@@ -19,6 +19,18 @@ class CategoryTest extends TestCase
     }
 
     /** @test */
+    public function it_has_a_title()
+    {
+        $this->assertNotNull($this->category->title);
+    }
+
+    /** @test */
+    public function it_has_a_slug()
+    {
+        $this->assertNotNull($this->category->slug);
+    }
+
+    /** @test */
     public function it_can_tell_you_about_its_posts()
     {
         $this->assertInstanceOf(\Illuminate\Database\Eloquent\Collection::class, $this->category->posts);
