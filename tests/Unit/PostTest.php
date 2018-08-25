@@ -18,11 +18,16 @@ class PostTest extends TestCase
         $this->post = factory(\App\Post::class)->create();
     }
 
-
     /** @test */
     public function it_has_a_title()
     {
         $this->assertNotNull($this->post->title);
+    }
+
+    /** @test */
+    public function it_has_a_slug()
+    {
+        $this->assertNotNull($this->post->slug);
     }
 
     /** @test */
@@ -41,6 +46,11 @@ class PostTest extends TestCase
     public function it_has_an_associated_image()
     {
         $this->assertInstanceOf(\Illuminate\Database\Eloquent\Collection::class, $this->post->images);
+    }
 
+    /** @test */
+    public function it_has_an_associated_category()
+    {
+        $this->assertInstanceOf(\App\Category::class, $this->post->category);
     }
 }
