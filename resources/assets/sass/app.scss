@@ -1,14 +1,68 @@
+@import "libs/vars";
+@import "libs/functions";
+@import "libs/mixins";
+@import "libs/vendor";
+@import "libs/breakpoints";
+@import "libs/html-grid";
 
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+// # FONT AWESOME
+@import "vendor/fontawesome/fontawesome";
+@import "vendor/fontawesome/brands";
+@import "vendor/fontawesome/regular";
+@import "vendor/fontawesome/solid";
 
-// Variables
-@import 'variables';
+/*
+    Construct by Pixelarity
+    pixelarity.com | hello@pixelarity.com
+    License: pixelarity.com/license
+*/
 
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
+// Breakpoints.
 
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+@include breakpoints((xlarge: (1281px, 1680px), large: (981px, 1280px), medium: (737px, 980px), small: (481px, 736px), xsmall: (null, 480px)));
+
+// Mixins.
+
+@mixin color($p) {
+    @include color-typography($p);
+    @include color-box($p);
+    @include color-button($p);
+    @include color-form($p);
+    @include color-list($p);
+    @include color-icons($p);
+    @include color-section($p);
+    @include color-table($p);
+    @include color-features($p);
+    @include color-spotlights($p);
 }
+
+// Base.
+
+@import "base/reset";
+@import "base/page";
+@import "base/typography";
+
+// Component.
+
+@import "components/row";
+@import "components/box";
+@import "components/button";
+@import "components/form";
+@import "components/icon";
+@import "components/image";
+@import "components/list";
+@import "components/actions";
+@import "components/icons";
+@import "components/section";
+@import "components/table";
+@import "components/highlights";
+@import "components/features";
+@import "components/spotlights";
+@import "components/wrapper";
+
+// Layout.
+
+@import "layout/banner";
+@import "layout/header";
+@import "layout/main";
+@import "layout/footer";

@@ -1,91 +1,21 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.master')
 
-        <title>Mikeylicio.us</title>
+@section('hero')
+    @component('partials.hero')
+        @slot('title')
+            Hi, I'm Mikey.
+        @endslot
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
+        @slot('description')
+            <p>I'm a {{ date('Y') - 1991 }} year old web developer from Nottingham in the UK.</p> 
+            <p>I specialise in <a href="https://laravel.com" target="_blank">Laravel</a>, but I am also proficient in <a href="#languages" class="scrolly">many other programming languages</a>.</p> 
+            <p>I have been developing for the web for {{ date('Y') - 2004 }} years, and have been doing so commercially for {{ date('Y') - 2010 }} years.</p>
+            <p>I'm currently the Lead Developer at <a href="https://fifteen.co.uk" target="_blank">Fifteen</a>, and <a href="#contact" class="scrolly">available for freelance work.</a></p>
+            <br>
+        @endslot
+    @endcomponent
+@endsection
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
+@section('content')
 
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Mikeylicio.us
-                </div>
-
-                <div class="links">
-                    {{ \Illuminate\Foundation\Inspiring::quote() }}
-                </div>
-            </div>
-        </div>
-    </body>
-</html>
+@endsection
