@@ -13,7 +13,7 @@
     @endif
 
 
-    @if (!str_contains($post->created_at, 2018))
+    @if ($post->created_at->lte('2015'))
     {!!nl2br($post->body)!!}
     @else
     {!!$post->body!!}

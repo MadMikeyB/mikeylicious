@@ -5122,6 +5122,10 @@ pre {
   font-family: "Courier New", monospace;
   font-size: 0.9em;
   margin: 0 0 3em 0;
+  background-color: #444444;
+  padding: 2em;
+  max-width: 100%;
+  overflow-y: scroll;
 }
 
 pre code {

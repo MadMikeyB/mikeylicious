@@ -128,7 +128,11 @@
 		font-family: _font(family-fixed);
 		font-size: 0.9em;
 		margin: 0 0 _size(element-margin) 0;
-
+        background-color: #444444;
+        padding: 2em;
+        max-width: 100%;
+        overflow-y: scroll;
+        
 		code {
 			display: block;
 			line-height: 1.75;
