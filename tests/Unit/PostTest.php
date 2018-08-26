@@ -43,7 +43,7 @@ class PostTest extends TestCase
     }
 
     /** @test */
-    public function it_has_an_associated_image()
+    public function it_has_an_associated_image_collection()
     {
         $this->assertInstanceOf(\Illuminate\Database\Eloquent\Collection::class, $this->post->images);
     }
