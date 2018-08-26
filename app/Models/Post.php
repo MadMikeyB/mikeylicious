@@ -53,7 +53,6 @@ class Post extends Model
         return $this->images->first();
     }
 
-
     /**
      * Get the Intro Attribute
      * 
@@ -63,7 +62,6 @@ class Post extends Model
     {
         return strip_tags(substr($this->body, strpos($this->body, "<p"), strpos($this->body, "</p>")+4));
     }
-
 
     /**
      * Get the Excerpt Attribute

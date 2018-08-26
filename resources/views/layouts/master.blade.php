@@ -1,7 +1,11 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>Full Stack Developer and DevOps Engineer Nottingham - mikeylicio.us</title>
+        @if(View::hasSection('title'))
+        <title>@yield('title') &mdash; Full Stack Developer and DevOps Engineer Nottingham &mdash; mikeylicio.us</title>
+        @else
+        <title>Full Stack Developer and DevOps Engineer Nottingham &mdash; mikeylicio.us</title>
+        @endif
         <meta charset="utf-8" >
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" >
         

@@ -22,4 +22,8 @@ Route::get('/article/{post}', function($post) {
     return redirect()->route('posts.show', $post);
 });
 
-Route::fallback('Page\\PageController@show');
+Route::namespace('Page')->group(function() {
+    Route::get('{page}', 'PageController@show')->name('pages.show');
+});
+
+// Route::fallback('Page\\PageController@show');

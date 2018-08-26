@@ -111,7 +111,7 @@
                 </a>
             </div>
             @endif
-            <p>{!!$post->excerpt!!}</p>
+            <p>{!!$post->intro!!}</p>
             <ul class="actions special">
                 <li><a href="{{route('posts.show', $post)}}" class="button">Learn More</a></li>
             </ul>
