@@ -1,6 +1,14 @@
 a[href="#menu"]:not(.close) {
     position: absolute;
     top: 2.5%;
+    left: 6%;
+    color: white;
+    font-size: 2em;
+}
+
+a.home {
+    position: absolute;
+    top: 2.5%;
     left: 2.5%;
     color: white;
     font-size: 2em;

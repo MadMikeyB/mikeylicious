@@ -37,6 +37,9 @@
         <a href="#menu">
             <i class="fa fa-bars"></i>
         </a>
+        <a class="home" href="{{route('home')}}">
+            <i class="fa fa-home"></i>
+        </a>
 
         <!-- Banner -->
         @if(View::hasSection('hero'))
