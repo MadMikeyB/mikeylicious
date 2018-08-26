@@ -62,7 +62,7 @@
         <section>
             @if ($portfolio->featured_image)
             <a class="image" href="{{$portfolio->link}}" target="_blank">
-                <img src="{{asset($portfolio->featured_image->path)}}" data-position="center center" alt="{{$portfolio->title}}">
+                <img src="{{asset('/storage/'.$portfolio->featured_image->path)}}" data-position="center center" alt="{{$portfolio->title}}">
             </a>
             @endif
             <div class="content">
@@ -107,7 +107,7 @@
             @if ($post->featured_image)
             <div class="image fit">
                 <a href="{{route('posts.show', $post)}}">
-                    <img src="{{asset($post->featured_image->path)}}" alt="{{$post->title}}">
+                    <img src="{{asset('/storage/'.$post->featured_image->path)}}" alt="{{$post->title}}">
                 </a>
             </div>
             @endif

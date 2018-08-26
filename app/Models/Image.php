@@ -10,17 +10,7 @@ class Image extends Model
      * @var array The properties guarded from mass assignment
      */
     public $guarded = [];
-
-    /**
-     * Get the path attribute
-     * 
-     * @return string
-     */
-    public function getPathAttribute()
-    {
-        return '/storage/'.$this->getOriginal('path');
-    }
-
+    
     /**
      * Get all of the owning images
      * 
