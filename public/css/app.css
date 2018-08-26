@@ -6508,7 +6508,8 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"],
 button,
-.button {
+.button,
+.pagination .page-item {
   -moz-appearance: none;
   -webkit-appearance: none;
   -ms-appearance: none;
@@ -6532,7 +6533,8 @@ input[type="submit"]:after,
 input[type="reset"]:after,
 input[type="button"]:after,
 button:after,
-.button:after {
+.button:after,
+.pagination .page-item:after {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   content: '\F105';
@@ -6545,7 +6547,8 @@ input[type="submit"].icon,
 input[type="reset"].icon,
 input[type="button"].icon,
 button.icon,
-.button.icon {
+.button.icon,
+.pagination .icon.page-item {
   padding-left: 1.35em;
 }
 
@@ -6553,7 +6556,8 @@ input[type="submit"].icon:after,
 input[type="reset"].icon:after,
 input[type="button"].icon:after,
 button.icon:after,
-.button.icon:after {
+.button.icon:after,
+.pagination .icon.page-item:after {
   display: none;
 }
 
@@ -6561,7 +6565,8 @@ input[type="submit"].icon:before,
 input[type="reset"].icon:before,
 input[type="button"].icon:before,
 button.icon:before,
-.button.icon:before {
+.button.icon:before,
+.pagination .icon.page-item:before {
   -webkit-transition: color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out;
   margin-right: 0.5em;
@@ -6571,7 +6576,8 @@ input[type="submit"].fit,
 input[type="reset"].fit,
 input[type="button"].fit,
 button.fit,
-.button.fit {
+.button.fit,
+.pagination .fit.page-item {
   width: 100%;
 }
 
@@ -6579,7 +6585,8 @@ input[type="submit"].small,
 input[type="reset"].small,
 input[type="button"].small,
 button.small,
-.button.small {
+.button.small,
+.pagination .small.page-item {
   font-size: 0.8em;
 }
 
@@ -6587,7 +6594,8 @@ input[type="submit"].large,
 input[type="reset"].large,
 input[type="button"].large,
 button.large,
-.button.large {
+.button.large,
+.pagination .large.page-item {
   font-size: 1.15em;
 }
 
@@ -6595,7 +6603,8 @@ input[type="submit"].solo,
 input[type="reset"].solo,
 input[type="button"].solo,
 button.solo,
-.button.solo {
+.button.solo,
+.pagination .solo.page-item {
   border-radius: 100%;
   display: inline-block;
   height: 2.15em;
@@ -6609,7 +6618,8 @@ input[type="submit"].solo:before,
 input[type="reset"].solo:before,
 input[type="button"].solo:before,
 button.solo:before,
-.button.solo:before {
+.button.solo:before,
+.pagination .solo.page-item:before {
   margin: 0 !important;
 }
 
@@ -6617,7 +6627,8 @@ input[type="submit"].solo:after,
 input[type="reset"].solo:after,
 input[type="button"].solo:after,
 button.solo:after,
-.button.solo:after {
+.button.solo:after,
+.pagination .solo.page-item:after {
   display: none;
 }
 
@@ -6625,7 +6636,8 @@ input[type="submit"].solo.large,
 input[type="reset"].solo.large,
 input[type="button"].solo.large,
 button.solo.large,
-.button.solo.large {
+.button.solo.large,
+.pagination .solo.large.page-item {
   font-size: 2em;
 }
 
@@ -6637,7 +6649,9 @@ input[type="button"]:disabled,
 button.disabled,
 button:disabled,
 .button.disabled,
-.button:disabled {
+.pagination .disabled.page-item,
+.button:disabled,
+.pagination .page-item:disabled {
   pointer-events: none;
   opacity: 0.25;
 }
@@ -6647,7 +6661,8 @@ button:disabled,
   input[type="reset"],
   input[type="button"],
   button,
-  .button {
+  .button,
+  .pagination .page-item {
     padding: 0;
   }
 }
@@ -6656,7 +6671,8 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"],
 button,
-.button {
+.button,
+.pagination .page-item {
   background-color: transparent;
   border-color: rgba(144, 144, 144, 0.25);
   color: #8f8f8f !important;
@@ -6666,7 +6682,8 @@ input[type="submit"]:hover,
 input[type="reset"]:hover,
 input[type="button"]:hover,
 button:hover,
-.button:hover {
+.button:hover,
+.pagination .page-item:hover {
   border-color: #4a32bd;
   color: #4a32bd !important;
 }
@@ -6675,7 +6692,8 @@ input[type="submit"]:active,
 input[type="reset"]:active,
 input[type="button"]:active,
 button:active,
-.button:active {
+.button:active,
+.pagination .page-item:active {
   background-color: rgba(74, 50, 189, 0.1);
   border-color: #4a32bd;
   color: #4a32bd !important;
@@ -6685,7 +6703,8 @@ input[type="submit"].icon:before,
 input[type="reset"].icon:before,
 input[type="button"].icon:before,
 button.icon:before,
-.button.icon:before {
+.button.icon:before,
+.pagination .icon.page-item:before {
   color: #b8b8b8;
 }
 
@@ -6693,7 +6712,8 @@ input[type="submit"].primary,
 input[type="reset"].primary,
 input[type="button"].primary,
 button.primary,
-.button.primary {
+.button.primary,
+.pagination .primary.page-item {
   background-color: #4a32bd;
   border-color: transparent;
   color: #ffffff !important;
@@ -6703,7 +6723,8 @@ input[type="submit"].primary.icon:before,
 input[type="reset"].primary.icon:before,
 input[type="button"].primary.icon:before,
 button.primary.icon:before,
-.button.primary.icon:before {
+.button.primary.icon:before,
+.pagination .primary.icon.page-item:before {
   color: #b7ade5;
 }
 
@@ -6711,7 +6732,8 @@ input[type="submit"].primary:hover,
 input[type="reset"].primary:hover,
 input[type="button"].primary:hover,
 button.primary:hover,
-.button.primary:hover {
+.button.primary:hover,
+.pagination .primary.page-item:hover {
   background-color: #563dcc;
 }
 
@@ -6719,7 +6741,8 @@ input[type="submit"].primary:active,
 input[type="reset"].primary:active,
 input[type="button"].primary:active,
 button.primary:active,
-.button.primary:active {
+.button.primary:active,
+.pagination .primary.page-item:active {
   background-color: #422da9;
 }
 
@@ -7179,14 +7202,18 @@ ul.actions.fit.stacked {
   ul.actions:not(.fixed) li input[type="reset"],
   ul.actions:not(.fixed) li input[type="button"],
   ul.actions:not(.fixed) li button,
-  ul.actions:not(.fixed) li .button {
+  ul.actions:not(.fixed) li .button,
+  ul.actions:not(.fixed) li .pagination .page-item,
+  .pagination ul.actions:not(.fixed) li .page-item {
     width: 100%;
   }
   ul.actions:not(.fixed) li input[type="submit"].icon:before,
   ul.actions:not(.fixed) li input[type="reset"].icon:before,
   ul.actions:not(.fixed) li input[type="button"].icon:before,
   ul.actions:not(.fixed) li button.icon:before,
-  ul.actions:not(.fixed) li .button.icon:before {
+  ul.actions:not(.fixed) li .button.icon:before,
+  ul.actions:not(.fixed) li .pagination .icon.page-item:before,
+  .pagination ul.actions:not(.fixed) li .icon.page-item:before {
     margin-left: -0.5em;
   }
 }
@@ -7727,7 +7754,9 @@ table.alt tbody tr td {
 .wrapper.style1 input[type="reset"],
 .wrapper.style1 input[type="button"],
 .wrapper.style1 button,
-.wrapper.style1 .button {
+.wrapper.style1 .button,
+.wrapper.style1 .pagination .page-item,
+.pagination .wrapper.style1 .page-item {
   background-color: transparent;
   border-color: rgba(144, 144, 144, 0.25);
   color: #ffffff !important;
@@ -7737,7 +7766,9 @@ table.alt tbody tr td {
 .wrapper.style1 input[type="reset"]:hover,
 .wrapper.style1 input[type="button"]:hover,
 .wrapper.style1 button:hover,
-.wrapper.style1 .button:hover {
+.wrapper.style1 .button:hover,
+.wrapper.style1 .pagination .page-item:hover,
+.pagination .wrapper.style1 .page-item:hover {
   border-color: #4a32bd;
   color: #4a32bd !important;
 }
@@ -7746,7 +7777,9 @@ table.alt tbody tr td {
 .wrapper.style1 input[type="reset"]:active,
 .wrapper.style1 input[type="button"]:active,
 .wrapper.style1 button:active,
-.wrapper.style1 .button:active {
+.wrapper.style1 .button:active,
+.wrapper.style1 .pagination .page-item:active,
+.pagination .wrapper.style1 .page-item:active {
   background-color: rgba(74, 50, 189, 0.1);
   border-color: #4a32bd;
   color: #4a32bd !important;
@@ -7756,7 +7789,9 @@ table.alt tbody tr td {
 .wrapper.style1 input[type="reset"].icon:before,
 .wrapper.style1 input[type="button"].icon:before,
 .wrapper.style1 button.icon:before,
-.wrapper.style1 .button.icon:before {
+.wrapper.style1 .button.icon:before,
+.wrapper.style1 .pagination .icon.page-item:before,
+.pagination .wrapper.style1 .icon.page-item:before {
   color: #b7ade5;
 }
 
@@ -7764,7 +7799,9 @@ table.alt tbody tr td {
 .wrapper.style1 input[type="reset"].primary,
 .wrapper.style1 input[type="button"].primary,
 .wrapper.style1 button.primary,
-.wrapper.style1 .button.primary {
+.wrapper.style1 .button.primary,
+.wrapper.style1 .pagination .primary.page-item,
+.pagination .wrapper.style1 .primary.page-item {
   background-color: #ffffff;
   border-color: transparent;
   color: #8f8f8f !important;
@@ -7774,7 +7811,9 @@ table.alt tbody tr td {
 .wrapper.style1 input[type="reset"].primary.icon:before,
 .wrapper.style1 input[type="button"].primary.icon:before,
 .wrapper.style1 button.primary.icon:before,
-.wrapper.style1 .button.primary.icon:before {
+.wrapper.style1 .button.primary.icon:before,
+.wrapper.style1 .pagination .primary.icon.page-item:before,
+.pagination .wrapper.style1 .primary.icon.page-item:before {
   color: #b8b8b8;
 }
 
@@ -7782,7 +7821,9 @@ table.alt tbody tr td {
 .wrapper.style1 input[type="reset"].primary:hover,
 .wrapper.style1 input[type="button"].primary:hover,
 .wrapper.style1 button.primary:hover,
-.wrapper.style1 .button.primary:hover {
+.wrapper.style1 .button.primary:hover,
+.wrapper.style1 .pagination .primary.page-item:hover,
+.pagination .wrapper.style1 .primary.page-item:hover {
   color: #4a32bd !important;
 }
 
@@ -7790,7 +7831,9 @@ table.alt tbody tr td {
 .wrapper.style1 input[type="reset"].primary:hover:before,
 .wrapper.style1 input[type="button"].primary:hover:before,
 .wrapper.style1 button.primary:hover:before,
-.wrapper.style1 .button.primary:hover:before {
+.wrapper.style1 .button.primary:hover:before,
+.wrapper.style1 .pagination .primary.page-item:hover:before,
+.pagination .wrapper.style1 .primary.page-item:hover:before {
   color: #4a32bd;
 }
 
@@ -7979,7 +8022,9 @@ table.alt tbody tr td {
 .wrapper.style2 input[type="reset"],
 .wrapper.style2 input[type="button"],
 .wrapper.style2 button,
-.wrapper.style2 .button {
+.wrapper.style2 .button,
+.wrapper.style2 .pagination .page-item,
+.pagination .wrapper.style2 .page-item {
   background-color: transparent;
   border-color: rgba(144, 144, 144, 0.25);
   color: #8f8f8f !important;
@@ -7989,7 +8034,9 @@ table.alt tbody tr td {
 .wrapper.style2 input[type="reset"]:hover,
 .wrapper.style2 input[type="button"]:hover,
 .wrapper.style2 button:hover,
-.wrapper.style2 .button:hover {
+.wrapper.style2 .button:hover,
+.wrapper.style2 .pagination .page-item:hover,
+.pagination .wrapper.style2 .page-item:hover {
   border-color: #4a32bd;
   color: #4a32bd !important;
 }
@@ -7998,7 +8045,9 @@ table.alt tbody tr td {
 .wrapper.style2 input[type="reset"]:active,
 .wrapper.style2 input[type="button"]:active,
 .wrapper.style2 button:active,
-.wrapper.style2 .button:active {
+.wrapper.style2 .button:active,
+.wrapper.style2 .pagination .page-item:active,
+.pagination .wrapper.style2 .page-item:active {
   background-color: rgba(74, 50, 189, 0.1);
   border-color: #4a32bd;
   color: #4a32bd !important;
@@ -8008,7 +8057,9 @@ table.alt tbody tr td {
 .wrapper.style2 input[type="reset"].icon:before,
 .wrapper.style2 input[type="button"].icon:before,
 .wrapper.style2 button.icon:before,
-.wrapper.style2 .button.icon:before {
+.wrapper.style2 .button.icon:before,
+.wrapper.style2 .pagination .icon.page-item:before,
+.pagination .wrapper.style2 .icon.page-item:before {
   color: #b8b8b8;
 }
 
@@ -8016,7 +8067,9 @@ table.alt tbody tr td {
 .wrapper.style2 input[type="reset"].primary,
 .wrapper.style2 input[type="button"].primary,
 .wrapper.style2 button.primary,
-.wrapper.style2 .button.primary {
+.wrapper.style2 .button.primary,
+.wrapper.style2 .pagination .primary.page-item,
+.pagination .wrapper.style2 .primary.page-item {
   background-color: #4a32bd;
   border-color: transparent;
   color: #ffffff !important;
@@ -8026,7 +8079,9 @@ table.alt tbody tr td {
 .wrapper.style2 input[type="reset"].primary.icon:before,
 .wrapper.style2 input[type="button"].primary.icon:before,
 .wrapper.style2 button.primary.icon:before,
-.wrapper.style2 .button.primary.icon:before {
+.wrapper.style2 .button.primary.icon:before,
+.wrapper.style2 .pagination .primary.icon.page-item:before,
+.pagination .wrapper.style2 .primary.icon.page-item:before {
   color: #b7ade5;
 }
 
@@ -8034,7 +8089,9 @@ table.alt tbody tr td {
 .wrapper.style2 input[type="reset"].primary:hover,
 .wrapper.style2 input[type="button"].primary:hover,
 .wrapper.style2 button.primary:hover,
-.wrapper.style2 .button.primary:hover {
+.wrapper.style2 .button.primary:hover,
+.wrapper.style2 .pagination .primary.page-item:hover,
+.pagination .wrapper.style2 .primary.page-item:hover {
   background-color: #563dcc;
 }
 
@@ -8042,7 +8099,9 @@ table.alt tbody tr td {
 .wrapper.style2 input[type="reset"].primary:active,
 .wrapper.style2 input[type="button"].primary:active,
 .wrapper.style2 button.primary:active,
-.wrapper.style2 .button.primary:active {
+.wrapper.style2 .button.primary:active,
+.wrapper.style2 .pagination .primary.page-item:active,
+.pagination .wrapper.style2 .primary.page-item:active {
   background-color: #422da9;
 }
 
@@ -8227,6 +8286,35 @@ table.alt tbody tr td {
   }
 }
 
+.pagination {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+  margin: 0;
+  width: 100%;
+}
+
+.pagination .page-item {
+  padding: 0;
+  margin: 1em;
+}
+
+.pagination .page-item:after {
+  display: none;
+}
+
+.pagination .page-item .page-link {
+  padding: 0 2em;
+  text-decoration: none;
+}
+
 /* Banner */
 #banner {
   background-color: #4a32bd;
@@ -8256,7 +8344,9 @@ table.alt tbody tr td {
 #banner input[type="reset"],
 #banner input[type="button"],
 #banner button,
-#banner .button {
+#banner .button,
+#banner .pagination .page-item,
+.pagination #banner .page-item {
   background-color: transparent;
   border-color: rgba(144, 144, 144, 0.25);
   color: #ffffff !important;
@@ -8266,7 +8356,9 @@ table.alt tbody tr td {
 #banner input[type="reset"]:hover,
 #banner input[type="button"]:hover,
 #banner button:hover,
-#banner .button:hover {
+#banner .button:hover,
+#banner .pagination .page-item:hover,
+.pagination #banner .page-item:hover {
   border-color: #4a32bd;
   color: #4a32bd !important;
 }
@@ -8275,7 +8367,9 @@ table.alt tbody tr td {
 #banner input[type="reset"]:active,
 #banner input[type="button"]:active,
 #banner button:active,
-#banner .button:active {
+#banner .button:active,
+#banner .pagination .page-item:active,
+.pagination #banner .page-item:active {
   background-color: rgba(74, 50, 189, 0.1);
   border-color: #4a32bd;
   color: #4a32bd !important;
@@ -8285,7 +8379,9 @@ table.alt tbody tr td {
 #banner input[type="reset"].icon:before,
 #banner input[type="button"].icon:before,
 #banner button.icon:before,
-#banner .button.icon:before {
+#banner .button.icon:before,
+#banner .pagination .icon.page-item:before,
+.pagination #banner .icon.page-item:before {
   color: #b7ade5;
 }
 
@@ -8293,7 +8389,9 @@ table.alt tbody tr td {
 #banner input[type="reset"].primary,
 #banner input[type="button"].primary,
 #banner button.primary,
-#banner .button.primary {
+#banner .button.primary,
+#banner .pagination .primary.page-item,
+.pagination #banner .primary.page-item {
   background-color: #ffffff;
   border-color: transparent;
   color: #8f8f8f !important;
@@ -8303,7 +8401,9 @@ table.alt tbody tr td {
 #banner input[type="reset"].primary.icon:before,
 #banner input[type="button"].primary.icon:before,
 #banner button.primary.icon:before,
-#banner .button.primary.icon:before {
+#banner .button.primary.icon:before,
+#banner .pagination .primary.icon.page-item:before,
+.pagination #banner .primary.icon.page-item:before {
   color: #b8b8b8;
 }
 
@@ -8311,7 +8411,9 @@ table.alt tbody tr td {
 #banner input[type="reset"].primary:hover,
 #banner input[type="button"].primary:hover,
 #banner button.primary:hover,
-#banner .button.primary:hover {
+#banner .button.primary:hover,
+#banner .pagination .primary.page-item:hover,
+.pagination #banner .primary.page-item:hover {
   color: #4a32bd !important;
 }
 
@@ -8319,7 +8421,9 @@ table.alt tbody tr td {
 #banner input[type="reset"].primary:hover:before,
 #banner input[type="button"].primary:hover:before,
 #banner button.primary:hover:before,
-#banner .button.primary:hover:before {
+#banner .button.primary:hover:before,
+#banner .pagination .primary.page-item:hover:before,
+.pagination #banner .primary.page-item:hover:before {
   color: #4a32bd;
 }
 
