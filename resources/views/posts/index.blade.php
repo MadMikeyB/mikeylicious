@@ -2,7 +2,7 @@
 @section('hero')
     @component('partials.hero')
         @slot('title')
-            Blogs
+            Blog
         @endslot
 
         @slot('description')
@@ -10,7 +10,7 @@
         @endslot
     @endcomponent
 @endsection
-
+@section('title', 'Blog')
 @section('content')
 <div class="inner">
     <section id="blog" class="spotlights special">
@@ -18,7 +18,9 @@
         <section>
             <header class="major">
                 <h3><a href="{{route('posts.show', $post)}}">{{$post->title}}</a></h3>
+                @if ($post->published_at)
                 <small>{{$post->published_at->format('jS F Y \a\t g:i:a')}}</small>
+                @endif
             </header>
             @if ($post->featured_image)
             <div class="image fit">

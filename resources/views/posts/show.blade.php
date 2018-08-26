@@ -6,7 +6,9 @@
         @endslot
 
         @slot('description')
-            <p>{{$post->published_at->format('jS F Y \a\t g:i:a')}}</p>
+            @if ($post->published_at)
+                <p>{{$post->published_at->format('jS F Y \a\t g:i:a')}}</p>
+            @endif
             <p>{!!$post->intro!!}</p>
         @endslot
     @endcomponent

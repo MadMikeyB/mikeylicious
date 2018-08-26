@@ -41,6 +41,8 @@ class Page extends Model
         if (!$publishedAt) {
             $this->attributes['published_at'] = now()->toDateTimeString();
         }
+        
+        $this->attributes['published_at'] = $publishedAt;
     }
 
     /**

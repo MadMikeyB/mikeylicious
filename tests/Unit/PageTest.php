@@ -15,7 +15,7 @@ class PageTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $this->page = factory(\App\Models\Page::class)->create();
+        $this->page = factory(\App\Models\Page::class)->create(['published_at' => now()->toDateTimeString()]);
     }
 
     /** @test */
