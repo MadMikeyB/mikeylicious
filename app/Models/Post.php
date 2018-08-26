@@ -2,12 +2,14 @@
 
 namespace App\Models;
 
+use App\Notifications\PostPublished;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Post extends Model
 {
-    use SoftDeletes;
+    use SoftDeletes, Notifiable;
 
     /**
      * @var array The properties guarded from mass assignment
@@ -20,6 +22,23 @@ class Post extends Model
      * @var array
      */
     protected $dates = ['deleted_at', 'published_at'];
+
+
+    /**
+     * Boot the User Model.
+     */
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::created(function ($post) {
+            if (env('APP_ENV') !== 'local') {
+                if ((is_null($post->published_at)) && ($post->active)) {
+                    $post->notify(new PostPublished($post));
+                }
+            }
+        });
+    }
 
     /**
      * Set the route key name for Laravel's Route Model Binding

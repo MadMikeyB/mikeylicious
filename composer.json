@@ -9,7 +9,8 @@
         "alfonsobries/nova-froala-editor": "^1.0",
         "benjaminhirsch/nova-slug-field": "^1.0",
         "fideloper/proxy": "^4.0",
-        "laravel/framework": "5.7.*",
+        "laravel-notification-channels/twitter": "^1.0",
+        "laravel/framework": "5.6.*",
         "laravel/nova": "*",
         "laravel/tinker": "^1.0"
     },
