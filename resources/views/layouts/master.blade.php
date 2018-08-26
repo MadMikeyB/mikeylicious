@@ -8,7 +8,14 @@
         @endif
         <meta charset="utf-8" >
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" >
-        
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('favicons/apple-touch-icon.png') }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicons/favicon-32x32.png') }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicons/favicon-16x16.png') }}">
+        <link rel="manifest" href="{{ asset('favicons/site.webmanifest') }}">
+        <link rel="mask-icon" href="{{ asset('favicons/safari-pinned-tab.svg') }}" color="#4a32bd">
+        <meta name="msapplication-TileColor" content="#4a32bd">
+        <meta name="msapplication-TileImage" content="{{ asset('favicons/mstile-144x144.png') }}">
+        <meta name="theme-color" content="#4a32bd">
         @stack('styles-before')
         <link rel="stylesheet" href="{{asset('css/app.css')}}">
         @stack('styles-after')
