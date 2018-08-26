@@ -4988,7 +4988,7 @@ body.is-preload *, body.is-preload *:before, body.is-preload *:after {
 /* Type */
 body {
   background-color: #f5f5f5;
-  color: #9e9e9e;
+  color: #6e6e6e;
 }
 
 body, input, select, textarea {
@@ -6705,7 +6705,7 @@ input[type="button"].icon:before,
 button.icon:before,
 .button.icon:before,
 .pagination .icon.page-item:before {
-  color: #9e9e9e;
+  color: #6e6e6e;
 }
 
 input[type="submit"].primary,
@@ -6926,7 +6926,7 @@ select option {
 
 input[type="checkbox"] + label,
 input[type="radio"] + label {
-  color: #9e9e9e;
+  color: #6e6e6e;
 }
 
 input[type="checkbox"] + label:before,
@@ -6950,23 +6950,23 @@ input[type="radio"]:focus + label:before {
 }
 
 ::-webkit-input-placeholder {
-  color: #9e9e9e !important;
+  color: #6e6e6e !important;
 }
 
 :-moz-placeholder {
-  color: #9e9e9e !important;
+  color: #6e6e6e !important;
 }
 
 ::-moz-placeholder {
-  color: #9e9e9e !important;
+  color: #6e6e6e !important;
 }
 
 :-ms-input-placeholder {
-  color: #9e9e9e !important;
+  color: #6e6e6e !important;
 }
 
 .formerize-placeholder {
-  color: #9e9e9e !important;
+  color: #6e6e6e !important;
 }
 
 /* Icon */
@@ -7320,7 +7320,7 @@ ul.icons.large li {
 }
 
 ul.icons.large li:nth-of-type(even) {
-  color: #9e9e9e !important;
+  color: #6e6e6e !important;
 }
 
 ul.icons.large.special li {
@@ -7431,7 +7431,7 @@ footer.major {
 }
 
 header p {
-  color: #9e9e9e;
+  color: #6e6e6e;
 }
 
 header.major h1:after, header.major h2:after, header.major h3:after {
@@ -7814,7 +7814,7 @@ table.alt tbody tr td {
 .wrapper.style1 .button.primary.icon:before,
 .wrapper.style1 .pagination .primary.icon.page-item:before,
 .pagination .wrapper.style1 .primary.icon.page-item:before {
-  color: #9e9e9e;
+  color: #6e6e6e;
 }
 
 .wrapper.style1 input[type="submit"].primary:hover,
@@ -7982,7 +7982,7 @@ table.alt tbody tr td {
 
 .wrapper.style2 {
   background-color: #fff;
-  color: #9e9e9e;
+  color: #6e6e6e;
 }
 
 .wrapper.style2 input, .wrapper.style2 select, .wrapper.style2 textarea {
@@ -8060,7 +8060,7 @@ table.alt tbody tr td {
 .wrapper.style2 .button.icon:before,
 .wrapper.style2 .pagination .icon.page-item:before,
 .pagination .wrapper.style2 .icon.page-item:before {
-  color: #9e9e9e;
+  color: #6e6e6e;
 }
 
 .wrapper.style2 input[type="submit"].primary,
@@ -8139,7 +8139,7 @@ table.alt tbody tr td {
 
 .wrapper.style2 input[type="checkbox"] + label,
 .wrapper.style2 input[type="radio"] + label {
-  color: #9e9e9e;
+  color: #6e6e6e;
 }
 
 .wrapper.style2 input[type="checkbox"] + label:before,
@@ -8163,23 +8163,23 @@ table.alt tbody tr td {
 }
 
 .wrapper.style2 ::-webkit-input-placeholder {
-  color: #9e9e9e !important;
+  color: #6e6e6e !important;
 }
 
 .wrapper.style2 :-moz-placeholder {
-  color: #9e9e9e !important;
+  color: #6e6e6e !important;
 }
 
 .wrapper.style2 ::-moz-placeholder {
-  color: #9e9e9e !important;
+  color: #6e6e6e !important;
 }
 
 .wrapper.style2 :-ms-input-placeholder {
-  color: #9e9e9e !important;
+  color: #6e6e6e !important;
 }
 
 .wrapper.style2 .formerize-placeholder {
-  color: #9e9e9e !important;
+  color: #6e6e6e !important;
 }
 
 .wrapper.style2 ul.alt li {
@@ -8204,7 +8204,7 @@ table.alt tbody tr td {
 }
 
 .wrapper.style2 header p {
-  color: #9e9e9e;
+  color: #6e6e6e;
 }
 
 .wrapper.style2 header.major h1:after, .wrapper.style2 header.major h2:after, .wrapper.style2 header.major h3:after {
@@ -8446,7 +8446,7 @@ a[href="#menu"]:not(.close) {
 #menu .button.primary.icon:before,
 #menu .pagination .primary.icon.page-item:before,
 .pagination #menu .primary.icon.page-item:before {
-  color: #9e9e9e;
+  color: #6e6e6e;
 }
 
 #menu input[type="submit"].primary:hover,
@@ -8818,7 +8818,7 @@ body.is-menu-visible:after {
 #banner .button.primary.icon:before,
 #banner .pagination .primary.icon.page-item:before,
 .pagination #banner .primary.icon.page-item:before {
-  color: #9e9e9e;
+  color: #6e6e6e;
 }
 
 #banner input[type="submit"].primary:hover,
@@ -9004,7 +9004,7 @@ body.is-ie #banner {
 }
 
 #footer .copyright {
-  color: #9e9e9e;
+  color: #6e6e6e;
   font-size: 0.9em;
   margin: 0 0 3em 0;
   padding: 0;
