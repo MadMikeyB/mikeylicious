@@ -37,6 +37,18 @@ class PortfolioTest extends TestCase
     }
 
     /** @test */
+    public function it_has_a_status()
+    {
+        $this->assertNotNull($this->portfolio->status);
+    }
+
+    /** @test */
+    public function it_has_a_publish_date()
+    {
+        $this->assertNotNull($this->portfolio->published_at);
+    }
+
+    /** @test */
     public function it_has_an_author()
     {
         $this->assertInstanceOf(\App\User::class, $this->portfolio->author);

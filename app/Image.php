@@ -22,16 +22,6 @@ class Image extends Model
     }
 
     /**
-     * A post image belongs to a post
-     * 
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     */
-    // public function post()
-    // {
-    //     return $this->belongsTo(Post::class);
-    // }
-
-    /**
      * A post image belongs to a user
      * 
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo

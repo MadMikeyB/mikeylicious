@@ -37,6 +37,18 @@ class PageTest extends TestCase
     }
 
     /** @test */
+    public function it_has_a_status()
+    {
+        $this->assertNotNull($this->page->status);
+    }
+
+    /** @test */
+    public function it_has_a_publish_date()
+    {
+        $this->assertNotNull($this->page->published_at);
+    }
+
+    /** @test */
     public function it_has_an_author()
     {
         $this->assertInstanceOf(\App\User::class, $this->page->author);
@@ -46,5 +58,11 @@ class PageTest extends TestCase
     public function it_has_an_image()
     {
         $this->assertInstanceOf(\Illuminate\Database\Eloquent\Collection::class, $this->page->images);
+    }
+
+    /** @test */
+    public function it_has_many_fields()
+    {
+        $this->assertInstanceOf(\Illuminate\Database\Eloquent\Collection::class, $this->page->fields);
     }
 }

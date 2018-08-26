@@ -3,9 +3,12 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Page extends Model
 {
+    use SoftDeletes;
+    
     /**
      * @var array The properties guarded from mass assignment
      */
@@ -39,5 +42,15 @@ class Page extends Model
     public function images()
     {
         return $this->morphMany(Image::class, 'model');
+    }
+
+    /**
+     * A page has many fields
+     * 
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function fields()
+    {
+        return $this->hasMany(Field::class);
     }
 }

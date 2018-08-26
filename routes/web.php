@@ -11,13 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-// Route::get('blog.php4?ID={id}', 'PostController@show')->name('posts.show');
+Route::get('/', 'Page\\HomeController@show')->name('home');
 
 Route::prefix('blog')->namespace('Blog')->group(function() {
     Route::get('/', 'PostController@index')->name('posts.index');
     Route::get('{post}', 'PostController@show')->name('posts.show');
 });
+
+Route::fallback('Page\\PageController@show');

@@ -10,5 +10,7 @@ $factory->define(App\Post::class, function (Faker $faker) {
         'body' => $faker->paragraph,
         'user_id' => factory(App\User::class)->create()->id,
         'category_id' => factory(App\Category::class)->create()->id,
+        'status' => 'publish',
+        'published_at' => now()->toDateTimeString()
     ];
 });

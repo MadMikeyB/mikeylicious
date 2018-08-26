@@ -25,14 +25,22 @@ class ImagesTest extends TestCase
     }
 
     /** @test */
+    public function it_has_a_type()
+    {
+        $this->assertNotNull($this->image->model_type);
+    }
+
+    /** @test */
     public function it_has_an_author()
     {
+        $this->assertNotNull($this->image->user_id);
         $this->assertInstanceOf(\App\User::class, $this->image->author);
     }
 
     /** @test */
-    // public function it_has_a_post()
-    // {
-    //     $this->assertInstanceOf(\App\Post::class, $this->image->post);
-    // }
+    public function it_has_a_post()
+    {
+        $this->assertNotNull($this->image->model_id);
+        $this->assertInstanceOf(\App\Post::class, $this->image->model);
+    }
 }
