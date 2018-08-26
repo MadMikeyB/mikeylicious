@@ -15,6 +15,6 @@ class PageController extends Controller
      */
     public function show(Page $page)
     {
-        return $page;
+        return view('pages.show', compact('page'));
     }
 }
