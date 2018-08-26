@@ -18,4 +18,8 @@ Route::prefix('blog')->namespace('Blog')->group(function() {
     Route::get('{post}', 'PostController@show')->name('posts.show');
 });
 
+Route::get('/article/{post}', function($post) {
+    return redirect()->route('posts.show', $post);
+});
+
 Route::fallback('Page\\PageController@show');

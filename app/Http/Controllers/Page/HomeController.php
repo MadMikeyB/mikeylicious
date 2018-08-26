@@ -18,9 +18,9 @@ class HomeController extends Controller
     public function show()
     {
         $page = Page::with('fields')->where('slug', 'home')->first();
-        $portfolios = Portfolio::with('images')->where('status', 'publish')->take(3)->get();
-        $posts = Post::with('images')->where('status', 'publish')->take(4)->get();
+        $portfolios = Portfolio::with('images')->where('active', 1)->latest()->take(3)->get();
+        $posts = Post::with('images')->where('active', 1)->latest()->take(4)->get();
         
-        return view('pages.home', compact('posts', 'portfolios'));
+        return view('pages.home', compact('page', 'portfolios', 'posts'));
     }
 }

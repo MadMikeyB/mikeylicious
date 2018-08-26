@@ -20,7 +20,7 @@ class CreatePostsTable extends Migration
             $table->longText('body');
             $table->integer('user_id')->index();
             $table->integer('category_id')->index();
-            $table->enum('status', ['publish', 'draft']);
+            $table->tinyInteger('active');
             $table->softDeletes();
             $table->timestamp('published_at')->nullable();
             $table->timestamps();

@@ -15,7 +15,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::all();
+        $posts = Post::where('active', 1)->latest()->paginate(10);
 
         return view('posts.index', compact('posts'));
     }
@@ -28,6 +28,6 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        return $post;
+        return view('posts.show', compact('post'));
     }
 }

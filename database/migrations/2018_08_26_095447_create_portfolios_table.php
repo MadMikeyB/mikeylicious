@@ -17,9 +17,11 @@ class CreatePortfoliosTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->string('slug')->unique();
+            $table->text('intro');
             $table->longText('body');
+            $table->string('link');
             $table->integer('user_id')->index();
-            $table->enum('status', ['publish', 'draft']);
+            $table->tinyInteger('active');
             $table->softDeletes();
             $table->timestamp('published_at')->nullable();
             $table->timestamps();

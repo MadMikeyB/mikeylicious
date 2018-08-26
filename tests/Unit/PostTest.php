@@ -39,7 +39,7 @@ class PostTest extends TestCase
     /** @test */
     public function it_has_a_status()
     {
-        $this->assertNotNull($this->post->status);
+        $this->assertNotNull($this->post->active);
     }
 
     /** @test */

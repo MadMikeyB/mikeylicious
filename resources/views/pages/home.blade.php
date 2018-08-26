@@ -19,13 +19,14 @@
 @section('content')
 <div class="inner">
     {{-- About --}}
+    @php
+        $intro = $page->fields->where('key', 'what_i_do')->first();
+    @endphp
+    @if ($intro)
     <section id="languages" class="special">
         <header class="major">
-            <h2>What I do</h2>
-            <p>I consider myself a Full Stack Developer and DevOps Engineer. Though the definition changes on a day to day basis, what it essentially boils down to is being able to read and comprehend code written in many different styles and languages, on many different platforms.</p>
-            <p>My daily driver is Laravel for my server side application logic and VueJS as my front-end datalayer. I also recognise that not all projects do not have to be as bespoke, and as such I also work with WordPress.</p>
-            <p>I have previously worked with multiple frameworks for PHP, including Zend Framework, CakePHP, CodeIgniter and Symfony. I am proficient with what I consider the basics of the web also, these being HTML5, CSS3, and the various ECMAScripts.</p>
-            <p>I am also proficient in server side technologies such as; Nginx, Apache, MySQL, MariaDB, as well as Amazon's various offerings.</p>
+            <h2>{{$intro->title}}</h2>
+            {!!$intro->body!!}
         </header>
         <ul class="icons large series">
             <li title="Laravel" class="icon fab fa-laravel"></li>
@@ -37,67 +38,56 @@
             <li title="NodeJS" class="icon fab fa-node-js"></li>
             <li title="Python3" class="icon fab fa-python"></li>
             <li title="MySQL, MariaDB Databases" class="icon fas fa-database"></li>
-            <li title="DevOps" class="icon fas fa-server"ad of.</p>
-        </header>
+            <li title="DevOps" class="icon fas fa-server"></li>
+            <li title="WordPress" class="icon fab fa-wordpress-simple"></li>
+        </ul>
     </section>
+    @endif
     {{-- / About --}}
 
     {{-- Portfolio --}}
+    @php
+        $portfolioIntro = $page->fields->where('key', 'previous_projects')->first();
+    @endphp
+    @if ($portfolioIntro)
+    <section class="special">
+        <header class="major">
+            <h2>{{$portfolioIntro->title}}</h2>
+            {!!$portfolioIntro->body!!}
+        </header>
+    </section>
+    @endif
     <section class="highlights">
         @foreach ($portfolios as $portfolio)
         <section>
-            <a class="image" href="https://www.gamefront.com" target="_blank">
-                <img src="images/gamefront-fullpage.jpg" data-position="center center" alt="GameFront">
+            @if ($portfolio->featured_image)
+            <a class="image" href="{{$portfolio->link}}" target="_blank">
+                <img src="{{asset($portfolio->featured_image->path)}}" data-position="center center" alt="{{$portfolio->title}}">
             </a>
+            @endif
             <div class="content">
                 <header class="major">
-                    <h2>GameFront</h2>
-                    <p>Gaming Mods, News and Community Forums. Previously in the North American top 100 websites, holding over 1,000,000 gaming files with a network of over 80 gaming sites.</p>
+                    <h2>{{$portfolio->title}}</h2>
+                    <p>{!!$portfolio->intro!!}</p>
                 </header>
-                <p>Overseeing the rebirth what was once a web giant was always going to be tricky, and GameFront was no exception. With over 6 million records to deal with, this has been the most challenging project of my career. It has also been the most rewarding. I learnt so much writing GameFront from the ground up, and continue learning to this day.</p>
+                {!!$portfolio->body!!}
                 <ul class="actions">
-                    <li><a href="https://www.gamefront.com" target="_blank" class="button">Visit GameFront</a></li>
+                    <li><a href="{{$portfolio->link}}" target="_blank" class="button">Visit {{$portfolio->title}}</a></li>
                 </ul>
             </div>
         </section>
         @endforeach
-{{--         <section>
-            <a class="image" href="https://mytrackr.app" target="_blank">
-                <img src="images/mytrackr-fullpage.png" data-position="center center" alt="mytrackr">
-            </a>
-            <div class="content">
-                <header class="major">
-                    <h2>mytrackr</h2>
-                    <p>Time Tracking Application built over the course of a weekend for <a href="https://larahack.com" target="_blank" rel="nofollow">Larahack</a>.</p>
-                </header>
-                <p>Built over the course of a weekend for Larahack, eventually winning the contest, mytrackr is a time management application aimed at freelancers wanting to be able to manage their time more effectively.</p>
-                <ul class="actions">
-                    <li><a href="https://mytrackr.app" target="_blank" class="button">Visit mytrackr</a></li>
-                </ul>
-            </div>
-        </section>
-        <section>
-            <a class="image" href="https://laravelphp.uk" target="_blank">
-                <img src="images/laraveluk-fullpage.png" data-position="center center" alt="LaravelUK">
-            </a>
-            <div class="content">
-                <header class="major">
-                    <h2>LaravelUK</h2>
-                    <p>Working as a part of a team to build a website for our Slack Community</p>
-                </header>
-                <p>Working with a team of artisans over the weekend of the first Larahack, the aim was to create a functional website using new technologies which were then unfamiliar to me, such as Vue Router, VueX and Tailwind CSS. The result came out great, and it's nice that our little Slack Community has a place to call home.</p>
-                <ul class="actions">
-                    <li><a href="https://laravelphp.uk" target="_blank" class="button">Visit LaravelUK</a></li>
-                </ul>
-            </div>
-        </section> --}}
     </section>
 
     <!-- Blog -->
+    @php
+        $blogIntro = $page->fields->where('key', 'blog_intro')->first();
+    @endphp
+    @if ($blogIntro)
     <section id="blog-intro" class="special">
         <header class="major">
-            <h2>Blog</h2>
-            <p>Occasionally I'll write about industry news, my thoughts and opinions, package releases, etc. You can see my latest blog posts below.</p>
+            <h2>{{$blogIntro->title}}</h2>
+            <p>{!!$blogIntro->body!!}</p>
         </header>
         <footer class="major">
             <ul class="actions special">
@@ -105,58 +95,28 @@
             </ul>
         </footer>
     </section>
+    @endif
 
     <section id="blog" class="spotlights special">
         @foreach ($posts as $post)
         <section>
             <header class="major">
-                <h3>Neque donec lorem</h3>
+                <h3><a href="{{route('posts.show', $post)}}">{{$post->title}}</a></h3>
+                <small>{{$post->published_at->format('jS F Y \a\t g:i:a')}}</small>
             </header>
+            @if ($post->featured_image)
             <div class="image fit">
-                <img src="images/pic04.jpg" alt="" >
+                <a href="{{route('posts.show', $post)}}">
+                    <img src="{{asset($post->featured_image->path)}}" alt="{{$post->title}}">
+                </a>
             </div>
-            <p>Aliquet nisl, ac commodo neque est et dolor. Donec sed amet ornare, justo non pulvinar interdum, neque justo auctor lectus, facilisis imperdiet diam tempus lorem ipsum dolor.</p>
+            @endif
+            <p>{!!$post->excerpt!!}</p>
             <ul class="actions special">
-                <li><a href="#" class="button">Learn More</a></li>
+                <li><a href="{{route('posts.show', $post)}}" class="button">Learn More</a></li>
             </ul>
         </section>
         @endforeach
-{{--         <section>
-            <header class="major">
-                <h3>Magna tempus nisl</h3>
-            </header>
-            <div class="image fit">
-                <img src="images/pic05.jpg" alt="" >
-            </div>
-            <p>Aliquet nisl, ac commodo neque est et dolor. Donec sed amet ornare, justo non pulvinar interdum, neque justo auctor lectus, facilisis imperdiet diam tempus lorem ipsum dolor.</p>
-            <ul class="actions special">
-                <li><a href="#" class="button">Learn More</a></li>
-            </ul>
-        </section>
-        <section>
-            <header class="major">
-                <h3>Diam sed interdum</h3>
-            </header>
-            <div class="image fit">
-                <img src="images/pic06.jpg" alt="" >
-            </div>
-            <p>Aliquet nisl, ac commodo neque est et dolor. Donec sed amet ornare, justo non pulvinar interdum, neque justo auctor lectus, facilisis imperdiet diam tempus lorem ipsum dolor.</p>
-            <ul class="actions special">
-                <li><a href="#" class="button">Learn More</a></li>
-            </ul>
-        </section>
-        <section>
-            <header class="major">
-                <h3>Justo aliquet magna</h3>
-            </header>
-            <div class="image fit">
-                <img src="images/pic07.jpg" alt="" >
-            </div>
-            <p>Aliquet nisl, ac commodo neque est et dolor. Donec sed amet ornare, justo non pulvinar interdum, neque justo auctor lectus, facilisis imperdiet diam tempus lorem ipsum dolor.</p>
-            <ul class="actions special">
-                <li><a href="#" class="button">Learn More</a></li>
-            </ul>
-        </section> --}}
     </section>
 </div>
 @endsection

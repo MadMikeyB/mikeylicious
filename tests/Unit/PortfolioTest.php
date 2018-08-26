@@ -39,7 +39,7 @@ class PortfolioTest extends TestCase
     /** @test */
     public function it_has_a_status()
     {
-        $this->assertNotNull($this->portfolio->status);
+        $this->assertNotNull($this->portfolio->active);
     }
 
     /** @test */

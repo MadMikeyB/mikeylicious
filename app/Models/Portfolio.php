@@ -15,6 +15,13 @@ class Portfolio extends Model
     public $guarded = [];
 
     /**
+     * The attributes that should be cast to carbon instances.
+     *
+     * @var array
+     */
+    protected $dates = ['deleted_at', 'published_at'];
+
+    /**
      * Set the route key name for Laravel's Route Model Binding
      * 
      * @return string
@@ -22,6 +29,28 @@ class Portfolio extends Model
     public function getRouteKeyName()
     {
         return 'slug';
+    }
+
+    /**
+     * Set the Published At Attribute
+     * 
+     * @return void
+     */
+    public function setPublishedAtAttribute($publishedAt)
+    {
+        if (!$publishedAt) {
+            $this->attributes['published_at'] = now()->toDateTimeString();
+        }
+    }
+
+    /**
+     * Get the Featured Image Attribute
+     * 
+     * @return \App\Models\Image
+     */
+    public function getFeaturedImageAttribute()
+    {
+        return $this->images->first();
     }
 
     /**

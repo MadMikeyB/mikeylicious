@@ -4,8 +4,99 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8f700f83492d1c280d5cec580506e530",
+    "content-hash": "bd6dc5245f1c1a355c18072dd405515a",
     "packages": [
+        {
+            "name": "alfonsobries/nova-froala-editor",
+            "version": "1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/alfonsobries/nova-froala-editor.git",
+                "reference": "584a9de840bcff26cb5f159ff8df436ac903324d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/alfonsobries/nova-froala-editor/zipball/584a9de840bcff26cb5f159ff8df436ac903324d",
+                "reference": "584a9de840bcff26cb5f159ff8df436ac903324d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Vexilo\\NovaFroalaEditor\\NovaFroalaEditorServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Vexilo\\NovaFroalaEditor\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A Laravel Nova froala editor field.",
+            "keywords": [
+                "froala",
+                "laravel",
+                "nova"
+            ],
+            "time": "2018-08-25T00:06:09+00:00"
+        },
+        {
+            "name": "benjaminhirsch/nova-slug-field",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/benjaminhirsch/nova-slug-field.git",
+                "reference": "e4d53b46213279ca1962ec79a8448936df6b330e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/benjaminhirsch/nova-slug-field/zipball/e4d53b46213279ca1962ec79a8448936df6b330e",
+                "reference": "e4d53b46213279ca1962ec79a8448936df6b330e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Benjaminhirsch\\NovaSlugField\\FieldServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Benjaminhirsch\\NovaSlugField\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Benjamin Hirsch",
+                    "email": "mail@benjaminhirsch.net",
+                    "homepage": "https://wwwbenjaminhirsch.net",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A Laravel Nova field to generate a slugs.",
+            "keywords": [
+                "laravel",
+                "nova"
+            ],
+            "time": "2018-08-25T20:16:38+00:00"
+        },
         {
             "name": "cakephp/chronos",
             "version": "1.2.2",

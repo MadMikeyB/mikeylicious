@@ -19,7 +19,7 @@
         @endif
 
         <!-- Main -->
-        <section id="main" class="wrapper">
+        <section id="main" class="wrapper @yield('extraClasses')">
             @yield('content')
         </section>
 

@@ -39,7 +39,7 @@ class PageTest extends TestCase
     /** @test */
     public function it_has_a_status()
     {
-        $this->assertNotNull($this->page->status);
+        $this->assertNotNull($this->page->active);
     }
 
     /** @test */

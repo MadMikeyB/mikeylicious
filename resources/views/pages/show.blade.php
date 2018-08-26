@@ -1,5 +1,5 @@
 @extends('layouts.master')
-
+@section('extraClasses', 'alt')
 @section('content')
 <div class="inner">
     <header class="major special">
