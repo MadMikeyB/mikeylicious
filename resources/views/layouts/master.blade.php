@@ -22,6 +22,22 @@
 
     </head>
     <body class="is-preload">
+        <!-- Nav -->
+        <nav id="menu">
+            <ul class="links">
+                <li><a href="{{route('home')}}">Home</a></li>
+                <li><a href="{{route('posts.index')}}">Blog</a></li>
+                <li><a href="{{route('pages.show', 'about')}}">About</a></li>
+            </ul>
+            <ul class="actions stacked">
+                <li><a href="mailto:me@mikeylicio.us" class="button primary fit">Get in touch</a></li>
+            </ul>
+        </nav>
+        
+        <a href="#menu">
+            <i class="fa fa-bars"></i>
+        </a>
+
         <!-- Banner -->
         @if(View::hasSection('hero'))
         <section id="banner">
