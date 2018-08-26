@@ -12,6 +12,16 @@ class Image extends Model
     public $guarded = [];
 
     /**
+     * Get the path attribute
+     * 
+     * @return string
+     */
+    public function getPathAttribute()
+    {
+        return '/storage/'.$this->getOriginal('path');
+    }
+
+    /**
      * Get all of the owning images
      * 
      * @return Illuminate\Database\Eloquent\Relations\MorphTo
