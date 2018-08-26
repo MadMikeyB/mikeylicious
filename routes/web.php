@@ -22,6 +22,12 @@ Route::get('/article/{post}', function($post) {
     return redirect()->route('posts.show', $post);
 });
 
+Route::get('blog.php4', function() {
+    $id = request()->ID;
+    $post = \App\Models\Post::published()->active()->where('id', $id)->firstOrFail();
+    return view('posts.show', compact('post'));
+});
+
 Route::namespace('Page')->group(function() {
     Route::get('{page}', 'PageController@show')->name('pages.show');
 });
