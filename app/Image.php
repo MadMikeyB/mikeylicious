@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class PostImage extends Model
+class Image extends Model
 {
     /**
      * @var array The properties guarded from mass assignment
@@ -12,14 +12,24 @@ class PostImage extends Model
     public $guarded = [];
 
     /**
+     * Get all of the owning images
+     * 
+     * @return Illuminate\Database\Eloquent\Relations\MorphTo
+     */
+    public function model()
+    {
+        return $this->morphTo();
+    }
+
+    /**
      * A post image belongs to a post
      * 
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function post()
-    {
-        return $this->belongsTo(Post::class);
-    }
+    // public function post()
+    // {
+    //     return $this->belongsTo(Post::class);
+    // }
 
     /**
      * A post image belongs to a user

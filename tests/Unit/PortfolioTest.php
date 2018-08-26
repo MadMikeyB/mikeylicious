@@ -45,6 +45,6 @@ class PortfolioTest extends TestCase
     /** @test */
     public function it_has_an_image()
     {
-        $this->assertInstanceOf(\App\PortfolioImage::class, $this->portfolio->image);
+        $this->assertInstanceOf(\Illuminate\Database\Eloquent\Collection::class, $this->portfolio->images);
     }
 }

@@ -32,13 +32,12 @@ class Page extends Model
     }
 
     /**
-     * A post has many images
+     * A page has many images
      * 
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return \Illuminate\Database\Eloquent\Relations\MorphMany
      */
     public function images()
     {
-        return $this->hasMany(PostImage::class);
+        return $this->morphMany(Image::class, 'model');
     }
-
 }

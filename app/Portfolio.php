@@ -22,12 +22,22 @@ class Portfolio extends Model
     }
 
     /**
-     * A post belongs to a user
+     * A portfolio belongs to a user
      * 
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function author()
     {
         return $this->belongsTo(User::class, 'user_id');
+    }
+
+    /**
+     * A portfolio has many images
+     * 
+     * @return \Illuminate\Database\Eloquent\Relations\MorphMany
+     */
+    public function images()
+    {
+        return $this->morphMany(Image::class, 'model');
     }
 }

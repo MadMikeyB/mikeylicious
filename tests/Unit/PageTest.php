@@ -45,6 +45,6 @@ class PageTest extends TestCase
     /** @test */
     public function it_has_an_image()
     {
-        $this->assertInstanceOf(\App\PageImage::class, $this->page->image);
+        $this->assertInstanceOf(\Illuminate\Database\Eloquent\Collection::class, $this->page->images);
     }
 }
