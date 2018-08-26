@@ -15,7 +15,7 @@ class CategoryTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $this->category = factory(\App\Category::class)->create();
+        $this->category = factory(\App\Models\Category::class)->create();
     }
 
     /** @test */

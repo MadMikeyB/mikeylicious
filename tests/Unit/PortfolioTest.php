@@ -15,7 +15,7 @@ class PortfolioTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $this->portfolio = factory(\App\Portfolio::class)->create();
+        $this->portfolio = factory(\App\Models\Portfolio::class)->create();
     }
 
     /** @test */
@@ -51,7 +51,7 @@ class PortfolioTest extends TestCase
     /** @test */
     public function it_has_an_author()
     {
-        $this->assertInstanceOf(\App\User::class, $this->portfolio->author);
+        $this->assertInstanceOf(\App\Models\User::class, $this->portfolio->author);
     }
 
     /** @test */

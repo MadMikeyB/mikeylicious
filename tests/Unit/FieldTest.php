@@ -15,7 +15,7 @@ use RefreshDatabase;
     public function setUp()
     {
         parent::setUp();
-        $this->field = factory(\App\Field::class)->create();
+        $this->field = factory(\App\Models\Field::class)->create();
     }
 
     /** @test */
@@ -33,6 +33,6 @@ use RefreshDatabase;
     /** @test */
     public function it_is_associated_with_a_page()
     {
-        $this->assertInstanceOf(\App\Page::class, $this->field->page);
+        $this->assertInstanceOf(\App\Models\Page::class, $this->field->page);
     }
 }

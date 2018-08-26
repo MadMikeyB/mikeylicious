@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Page;
 
-use App\Page;
-use App\Post;
-use App\Portfolio;
+use App\Models\Page;
+use App\Models\Post;
+use App\Models\Portfolio;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 

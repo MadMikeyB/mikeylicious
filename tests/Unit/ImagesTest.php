@@ -15,7 +15,7 @@ class ImagesTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $this->image = factory(\App\Image::class)->create();
+        $this->image = factory(\App\Models\Image::class)->create();
     }
 
     /** @test */
@@ -34,13 +34,13 @@ class ImagesTest extends TestCase
     public function it_has_an_author()
     {
         $this->assertNotNull($this->image->user_id);
-        $this->assertInstanceOf(\App\User::class, $this->image->author);
+        $this->assertInstanceOf(\App\Models\User::class, $this->image->author);
     }
 
     /** @test */
     public function it_has_a_post()
     {
         $this->assertNotNull($this->image->model_id);
-        $this->assertInstanceOf(\App\Post::class, $this->image->model);
+        $this->assertInstanceOf(\App\Models\Post::class, $this->image->model);
     }
 }

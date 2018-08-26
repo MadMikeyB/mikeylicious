@@ -15,7 +15,7 @@ class PageTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $this->page = factory(\App\Page::class)->create();
+        $this->page = factory(\App\Models\Page::class)->create();
     }
 
     /** @test */
@@ -51,7 +51,7 @@ class PageTest extends TestCase
     /** @test */
     public function it_has_an_author()
     {
-        $this->assertInstanceOf(\App\User::class, $this->page->author);
+        $this->assertInstanceOf(\App\Models\User::class, $this->page->author);
     }
 
     /** @test */

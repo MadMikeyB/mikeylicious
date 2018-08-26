@@ -1,14 +1,14 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Page extends Model
+class Post extends Model
 {
     use SoftDeletes;
-    
+
     /**
      * @var array The properties guarded from mass assignment
      */
@@ -35,7 +35,7 @@ class Page extends Model
     }
 
     /**
-     * A page has many images
+     * A post has many images
      * 
      * @return \Illuminate\Database\Eloquent\Relations\MorphMany
      */
@@ -45,12 +45,12 @@ class Page extends Model
     }
 
     /**
-     * A page has many fields
+     * A post belongs to a category
      * 
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function fields()
+    public function category()
     {
-        return $this->hasMany(Field::class);
+        return $this->belongsTo(Category::class);
     }
 }

@@ -15,7 +15,7 @@ class CanViewPostsTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $this->post = factory(\App\Post::class)->create();
+        $this->post = factory(\App\Models\Post::class)->create();
     }
 
     /** @test */

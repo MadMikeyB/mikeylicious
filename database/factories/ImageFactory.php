@@ -2,11 +2,11 @@
 
 use Faker\Generator as Faker;
 
-$factory->define(App\Image::class, function (Faker $faker) {
+$factory->define(App\Models\Image::class, function (Faker $faker) {
     return [
-        'user_id' => factory(App\User::class)->create()->id,
-        'model_id' => factory(App\Post::class)->create()->id,
-        'model_type' => 'App\Post',
+        'user_id' => factory(App\Models\User::class)->create()->id,
+        'model_id' => factory(App\Models\Post::class)->create()->id,
+        'model_type' => 'App\Models\Post',
         'path' => $faker->imageUrl()
     ];
 });

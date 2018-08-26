@@ -15,7 +15,7 @@ class PostTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $this->post = factory(\App\Post::class)->create();
+        $this->post = factory(\App\Models\Post::class)->create();
     }
 
     /** @test */
@@ -52,7 +52,7 @@ class PostTest extends TestCase
     /** @test */
     public function it_has_an_author()
     {
-        $this->assertInstanceOf(\App\User::class, $this->post->author);
+        $this->assertInstanceOf(\App\Models\User::class, $this->post->author);
     }
 
     /** @test */
@@ -64,6 +64,6 @@ class PostTest extends TestCase
     /** @test */
     public function it_has_an_associated_category()
     {
-        $this->assertInstanceOf(\App\Category::class, $this->post->category);
+        $this->assertInstanceOf(\App\Models\Category::class, $this->post->category);
     }
 }
