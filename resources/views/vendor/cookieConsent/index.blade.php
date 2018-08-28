@@ -1,4 +1,24 @@
 @if($cookieConsentConfig['enabled'] && ! $alreadyConsentedWithCookies)
+    <style>
+        .js-cookie-consent.cookie-consent {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            padding: 1rem;
+            background-color: #4a32bd;
+            color: #b7ade5;
+            display: flex;
+            z-index: 99999;
+        }
+        .cookie-consent__message {
+            flex: 1;
+        }
+        @media all and (max-width: 768px) {
+            .js-cookie-consent.cookie-consent {
+                flex-direction: column;
+            }
+        }
+    </style>
 
     @include('cookieConsent::dialogContents')
 

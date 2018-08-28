@@ -4,6 +4,14 @@ a[href="#menu"]:not(.close) {
     left: 6%;
     color: white;
     font-size: 2em;
+
+    @media all and (max-width: 992px) {
+        left: 8%;
+    }
+
+    @media all and (max-width: 768px) {
+        left: 12%;
+    }
 }
 
 a.home {

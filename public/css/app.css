@@ -8323,6 +8323,18 @@ a[href="#menu"]:not(.close) {
   font-size: 2em;
 }
 
+@media all and (max-width: 992px) {
+  a[href="#menu"]:not(.close) {
+    left: 8%;
+  }
+}
+
+@media all and (max-width: 768px) {
+  a[href="#menu"]:not(.close) {
+    left: 12%;
+  }
+}
+
 a.home {
   position: absolute;
   top: 2.5%;
