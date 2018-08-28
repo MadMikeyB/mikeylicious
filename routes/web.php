@@ -19,7 +19,7 @@ Route::prefix('blog')->namespace('Blog')->group(function() {
 });
 
 Route::feeds();
-
+Route::get('error', 'SomeController@index');
 Route::namespace('Page')->group(function() {
     Route::get('{page}', 'PageController@show')->name('pages.show');
 });
