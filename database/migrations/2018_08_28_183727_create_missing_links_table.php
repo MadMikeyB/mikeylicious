@@ -17,6 +17,7 @@ class CreateMissingLinksTable extends Migration
             $table->increments('id');
             $table->string('url');
             $table->integer('hits')->default(0);
+            $table->softDeletes();
             $table->timestamps();
         });
     }

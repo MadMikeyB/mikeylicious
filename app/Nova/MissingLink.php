@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Http\Requests\NovaRequest;
+use App\Nova\Actions\ConvertMissingLinkToRedirect;
 
 class MissingLink extends Resource
 {
@@ -86,6 +87,8 @@ class MissingLink extends Resource
      */
     public function actions(Request $request)
     {
-        return [];
+        return [
+            new ConvertMissingLinkToRedirect
+        ];
     }
 }
