@@ -20,6 +20,8 @@ class HomeController extends Controller
         $page = Page::with('fields')
                     ->where('slug', 'home')
                     ->first();
+
+        $page->addViewWithExpiryDate(now()->addHours(2));
                     
         $portfolios = Portfolio::with('images')
                                 ->active()
