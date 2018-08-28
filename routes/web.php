@@ -18,14 +18,9 @@ Route::prefix('blog')->namespace('Blog')->group(function() {
     Route::get('{post}', 'PostController@show')->name('posts.show');
 });
 
-Route::get('blog.php4', function() {
-    $id = request()->ID;
-    $post = \App\Models\Post::published()->active()->where('id', $id)->firstOrFail();
-    return view('posts.show', compact('post'));
-});
+Route::feeds();
 
 Route::namespace('Page')->group(function() {
     Route::get('{page}', 'PageController@show')->name('pages.show');
 });
 
-// Route::fallback('Page\\PageController@show');

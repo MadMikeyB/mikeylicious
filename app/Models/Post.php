@@ -2,13 +2,15 @@
 
 namespace App\Models;
 
+use Spatie\Feed\FeedItem;
+use Spatie\Feed\Feedable;
 use App\Notifications\PostPublished;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 use CyrildeWit\EloquentViewable\Viewable;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Post extends Model
+class Post extends Model implements Feedable
 {
     use SoftDeletes, Notifiable, Viewable;
 
@@ -39,6 +41,23 @@ class Post extends Model
                 }
             }
         });
+    }
+
+    public function toFeedItem()
+    {
+        return FeedItem::create()
+            ->id($this->id)
+            ->title($this->title)
+            ->summary($this->intro)
+            ->updated($this->updated_at)
+            ->link(route('posts.show', $this))
+            ->author($this->author);
+    }
+
+
+    public static function getFeedItems()
+    {
+       return self::latest()->published()->active()->get();
     }
 
     /**
