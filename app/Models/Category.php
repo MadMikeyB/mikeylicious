@@ -13,7 +13,7 @@ class Category extends Model
 
     /**
      * A category can have many posts
-     * 
+     *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function posts()

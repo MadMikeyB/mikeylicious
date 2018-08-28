@@ -29,7 +29,7 @@ class User extends Authenticatable
 
     /**
      * A user has many posts
-     * 
+     *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function posts()
@@ -39,7 +39,7 @@ class User extends Authenticatable
 
     /**
      * A user has many pages
-     * 
+     *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function pages()
@@ -49,7 +49,7 @@ class User extends Authenticatable
 
     /**
      * A user has many portfolios
-     * 
+     *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function portfolios()
@@ -59,7 +59,7 @@ class User extends Authenticatable
 
     /**
      * A user has many images
-     * 
+     *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function images()

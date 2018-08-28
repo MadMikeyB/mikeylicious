@@ -16,7 +16,7 @@ class Field extends Model
 
     /**
      * A field belongs to a page
-     * 
+     *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function page()

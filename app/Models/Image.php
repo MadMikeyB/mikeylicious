@@ -13,7 +13,7 @@ class Image extends Model
     
     /**
      * Get all of the owning images
-     * 
+     *
      * @return Illuminate\Database\Eloquent\Relations\MorphTo
      */
     public function model()
@@ -23,7 +23,7 @@ class Image extends Model
 
     /**
      * A post image belongs to a user
-     * 
+     *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function author()

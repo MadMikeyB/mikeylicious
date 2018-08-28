@@ -24,7 +24,7 @@ class Page extends Model
 
     /**
      * Set the route key name for Laravel's Route Model Binding
-     * 
+     *
      * @return string
      */
     public function getRouteKeyName()
@@ -34,7 +34,7 @@ class Page extends Model
 
     /**
      * Set the Published At Attribute
-     * 
+     *
      * @return void
      */
     public function setPublishedAtAttribute($publishedAt)
@@ -48,7 +48,7 @@ class Page extends Model
 
     /**
      * Get the Featured Image Attribute
-     * 
+     *
      * @return \App\Models\Image
      */
     public function getFeaturedImageAttribute()
@@ -58,7 +58,7 @@ class Page extends Model
 
     /**
      * Get the Intro Attribute
-     * 
+     *
      * @return string
      */
     public function getIntroAttribute()
@@ -68,7 +68,7 @@ class Page extends Model
 
     /**
      * A post belongs to a user
-     * 
+     *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function author()
@@ -78,7 +78,7 @@ class Page extends Model
 
     /**
      * A page has many images
-     * 
+     *
      * @return \Illuminate\Database\Eloquent\Relations\MorphMany
      */
     public function images()
@@ -88,7 +88,7 @@ class Page extends Model
 
     /**
      * A page has many fields
-     * 
+     *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function fields()

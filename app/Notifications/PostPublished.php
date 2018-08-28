@@ -38,11 +38,12 @@ class PostPublished extends Notification
 
     /**
      * Send post to Twitter
-     * 
+     *
      * @param mixed $notifiable
      * @return \NotificationChannels\Twitter\TwitterStatusUpdate
      */
-    public function toTwitter($notifiable) {
+    public function toTwitter($notifiable)
+    {
         return new TwitterStatusUpdate($notifiable->title .' #'.studly_case($notifiable->category->title) .' '. route('posts.show', $notifiable));
     }
 }

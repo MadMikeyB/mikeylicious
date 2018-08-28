@@ -23,7 +23,7 @@ class Portfolio extends Model
 
     /**
      * Set the route key name for Laravel's Route Model Binding
-     * 
+     *
      * @return string
      */
     public function getRouteKeyName()
@@ -33,7 +33,7 @@ class Portfolio extends Model
 
     /**
      * Set the Published At Attribute
-     * 
+     *
      * @return void
      */
     public function setPublishedAtAttribute($publishedAt)
@@ -46,7 +46,7 @@ class Portfolio extends Model
 
     /**
      * Get the Featured Image Attribute
-     * 
+     *
      * @return \App\Models\Image
      */
     public function getFeaturedImageAttribute()
@@ -56,7 +56,7 @@ class Portfolio extends Model
 
     /**
      * A portfolio belongs to a user
-     * 
+     *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function author()
@@ -66,7 +66,7 @@ class Portfolio extends Model
 
     /**
      * A portfolio has many images
-     * 
+     *
      * @return \Illuminate\Database\Eloquent\Relations\MorphMany
      */
     public function images()
