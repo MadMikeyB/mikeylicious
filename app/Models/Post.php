@@ -43,6 +43,11 @@ class Post extends Model implements Feedable
         });
     }
 
+    /**
+     * Return the feed item structure for this resource
+     * 
+     * @return array
+     */
     public function toFeedItem()
     {
         return FeedItem::create()
@@ -55,6 +60,11 @@ class Post extends Model implements Feedable
     }
 
 
+    /**
+     * Get what should be included in the feed for this resource
+     * 
+     * @return \Illuminate\Database\Eloquent\Collection
+     */
     public static function getFeedItems()
     {
        return self::latest()->published()->active()->get();
