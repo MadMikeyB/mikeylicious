@@ -5,11 +5,12 @@ namespace App\Models;
 use App\Notifications\PostPublished;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
+use CyrildeWit\EloquentViewable\Viewable;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Post extends Model
 {
-    use SoftDeletes, Notifiable;
+    use SoftDeletes, Notifiable, Viewable;
 
     /**
      * @var array The properties guarded from mass assignment

@@ -31,6 +31,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
+        $post->addViewWithExpiryDate(now()->addHours(2));
         return view('posts.show', compact('post'));
     }
 }

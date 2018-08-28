@@ -16,6 +16,7 @@ class PageController extends Controller
      */
     public function show(Page $page)
     {
+        $page->addViewWithExpiryDate(now()->addHours(2));
         return view('pages.show', compact('page'));
     }
 }
