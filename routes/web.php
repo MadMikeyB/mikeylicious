@@ -18,10 +18,6 @@ Route::prefix('blog')->namespace('Blog')->group(function() {
     Route::get('{post}', 'PostController@show')->name('posts.show');
 });
 
-Route::get('/article/{post}', function($post) {
-    return redirect()->route('posts.show', $post);
-});
-
 Route::get('blog.php4', function() {
     $id = request()->ID;
     $post = \App\Models\Post::published()->active()->where('id', $id)->firstOrFail();
