@@ -28,11 +28,11 @@ class ConvertMissingLinkToRedirect extends Action
         foreach ($models as $model) {
             Redirect::updateOrCreate(
                 [
-                    'old_url' => $model->url
+                    'old_url' => str_replace(env('APP_URL'), '', $model->url)
                 ],
                 [
-                    'old_url' => $model->url,
-                    'new_url' => $fields->new_url
+                    'old_url' => str_replace(env('APP_URL'), '', $model->url),
+                    'new_url' => str_replace(env('APP_URL'), '', $fields->new_url)
                 ]
             );
             $model->delete();
